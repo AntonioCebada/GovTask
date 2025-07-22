@@ -18,13 +18,14 @@
         <!-- Mitad blanca -->
         <div class="login-container--white">
             <span class="login-form__label">Login</span>
-            <form action="" method="post" style="display: flex; flex-direction: column; align-items: center;">
+            <form action="{{route('login')}}" method="POST" style="display: flex; flex-direction: column; align-items: center;">
+                @csrf
                 <div class="login-form__input">
-                    <input type="text" name="email" placeholder="Correo Electronico" class="login-form__input--float">
+                    <input type="email" name="email" placeholder="Correo Electronico" class="login-form__input--float" required>
                     <i class="bi bi-person"></i>
                 </div>
                 <div class="login-form__input">
-                    <input type="password" name="password" placeholder="Contraseña" class="login-form__input--float">
+                    <input type="password" name="password" placeholder="Contraseña" class="login-form__input--float" required>
                     <i class="bi bi-lock"></i>
                 </div>
                 <button type="submit" class="login-form__button">Iniciar Sesión</button>

@@ -47,5 +47,27 @@
 
             </div>
         </div>
+
+        <!-- Formulario temporal para registro -->
+        <form action="{{route('login')}}" method="POST" style="display: flex; flex-direction: column; align-items: center;">
+                @csrf
+                <div class="login-form__input">
+                    <input type="text" name="name" placeholder="Nombre del ususario..." class="login-form__input--float" required>
+                    <input type="email" name="email" placeholder="Correo Electronico" class="login-form__input--float" required>
+                </div>
+                <div class="login-form__input">
+                    <input type="password" name="password" placeholder="Contraseña" class="login-form__input--float" required>
+                    <input type="password" name="password_confirmation" placeholder="Confirmar contraseña" class="login-form__input--float" required>
+                    <i class="bi bi-lock"></i>
+                </div> <br>
+
+                <select name="role_id" required>
+                    <option value="">Selecciona un rol</option>
+                    @foreach($roles as $role)
+                        <option value="{{ $role->id }}">{{ ucfirst($role->name) }}</option>
+                    @endforeach
+                </select><br>
+                <button type="submit" class="login-form__button">Registrar</button>
+            </form>
     </x-slot>
 </x-layouts.app>

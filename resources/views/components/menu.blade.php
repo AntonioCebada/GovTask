@@ -12,8 +12,11 @@
         <a href="{{route('dashboard')}}" class="menu-container__link">Home</a>
         <a href="{{ route('solicitudes') }}" class="menu-container__link">Solicitudes</a>
         <a href="{{ route('tablero') }}" class="menu-container__link">Tablero Kanban</a>
-        <p class="menu-container__title">ADMINISTRACION</p>
-        <a href="{{ route('usuarios') }}" class="menu-container__link">Usuarios</a>
-        <a href="{{ route('departamentos') }}" class="menu-container__link">Departamentos</a>
+        @if(auth()->user()->role->name === 'admin')
+            <p class="menu-container__title">ADMINISTRACION</p>
+            <a href="{{ route('usuarios') }}" class="menu-container__link">Usuarios</a>
+            <a href="{{ route('departamentos') }}" class="menu-container__link">Departamentos</a>
+        @endif
+        
     </div>
 </div>
