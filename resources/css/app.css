@@ -1,0 +1,10 @@
+/* CSS del login */
+@import 'login.css';
+/* CSS del header */
+@import 'header.css';
+/* CSS del menu */
+@import 'menu.css';
+/* CSS del contenido de la app */
+@import 'dashboard.css';
+/* CSS de la vista de solicitudes */
+@import 'solicitudes.css';

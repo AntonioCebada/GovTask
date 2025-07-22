@@ -1,0 +1,142 @@
+body, html{
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    background-color: #EFE6DE;
+    overflow: hidden;
+}
+
+/*
+---------------------------------------
+CONTENEDORES
+---------------------------------------
+*/
+.login-container{     /* Contenedor de todo el contenido*/
+    display: flex;
+    height: 100vh;
+    width: 100%;
+    
+}
+
+.login-container--red{     /*Mitad roja*/
+    flex: 1;
+    background-color: #9A0002;
+    width: 100%;
+    height: 95%;
+    display: flex;
+    align-items: center;
+    align-self: center;
+    margin-left: 2rem;
+    padding: 0 2rem;
+    box-sizing: border-box;
+    border-radius: 30px;
+    position: relative;
+    overflow: hidden;     /* Para que el video no se desborde */
+}
+
+.login-container--white{     /*Mitad blanca*/
+    flex: 1;
+    width: 100%;
+    height: 100%;
+    padding: 0 5rem;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    overflow: hidden;
+}
+
+/*
+---------------------------------------
+CONTENIDO DE LA MITAD ROJA
+---------------------------------------
+*/
+#animation-login{
+    position: absolute;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+}
+
+/*
+---------------------------------------
+CONTENIDO DE LA MITAD BLANCA
+---------------------------------------
+*/
+
+.login-form__label{
+    width: 100%;
+    height: max-content;
+    text-align: center;
+    font-family: 'Oswald', sans-serif;
+    font-size: 3.5rem;
+    color: black;
+}
+.login-form__input{     /* Contenedor de los input e iconos */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: max-content;
+    width: 100%;
+}
+
+.login-form__input input{     /* Input para correo y contraseña */
+    width: 93%;
+    height: 3rem;
+    margin: 2rem 0;
+    padding: 0 1rem;
+    border : 1px solid black;
+    border-radius: 0.5rem;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.2rem;
+    color: black;
+    background-color: #EFE6DE;
+    box-shadow: black 0.5rem 0.5rem;
+    outline: none;
+}
+
+.login-form__input--float{
+    transition: .5s, color .10s;
+    -webkit-transition: .5s, color .10s;
+    -moz-transition: .5s, color .10s;
+}
+.login-form__input--float:hover{
+    box-shadow: 0 8px 8px 0 #000000,0 8px 8px 0 #000000;
+    transform: translate(0px,5px);
+    -webkit-transform: translate(0px,5px);
+    -moz-transform:translate(0px,5px);
+}
+
+.login-form__input i{     /* Iconos para correo y contraseña */
+    position: absolute;
+    align-self: flex-end;
+    font-size: 2rem;
+    color: black;
+    margin-right: 2%;
+
+}
+
+.login-form__button{     /* Botón para entrar */
+    width: 80%;
+    height: 3.5rem;
+    margin: 2rem 0;
+    padding: 0 1rem;
+    border : none;
+    border-radius: 1.5rem;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.2rem;
+    color: #EFE6DE;
+    background-color: #1A5FAD;
+    cursor: pointer;
+    box-shadow: black 0.5rem 0.5rem;
+}
+
+.login-form__button:hover{
+    background-color: #9A0002;
+    transition: .5s, transform .10s;
+    font-size: 1.4rem;
+    scale: 1.1;
+}
