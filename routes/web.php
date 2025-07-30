@@ -25,13 +25,12 @@ Route::get('dashboard', function(){
 // vista de solicitudes
 Route::get('solicitudes', [SolicitudController::class, 'index'])->name('solicitudes');
 
-//vista del tablero
-Route::get('tablero', [TableroController::class, 'index'])->name('tablero');
-
 //vista de los usuarios y sus roles, tanto existentes como nuevos (ruta protegida)
-Route::middleware(['auth', 'role:admin'])->group(function(){
+Route::middleware(['auth', 'role:Administrador'])->group(function(){
     Route::get('usuarios', [UsuariosController::class, 'index'])->name('usuarios');
     Route::post('usuarios', [UsuariosController::class, 'registrar']);
+    Route::delete('usuarios/{id}', [UsuariosController::class, 'eliminar'])->name('usuarios.eliminar');
+    Route::put('usuarios/{id}', [UsuariosController::class, 'actualizar'])->name('usuarios.actualizar');
 });
 
 //departamentos

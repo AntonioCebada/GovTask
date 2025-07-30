@@ -52,10 +52,6 @@
                         <a href="#">Ver Kanban</a>
                         <a href="#">Gestionar Usuarios</a>
                         <a href="#">Departamentos</a>
-                        <form method="POST" action="{{ route('logout') }}">
-                            @csrf
-                            <button type="submit">Cerrar sesión</button>
-                        </form>
                     </div>
                 </div>
             </div>

@@ -8,3 +8,5 @@
 @import 'dashboard.css';
 /* CSS de la vista de solicitudes */
 @import 'solicitudes.css';
+/* CSS de la vista de usuarios */
+@import 'usuarios.css';
